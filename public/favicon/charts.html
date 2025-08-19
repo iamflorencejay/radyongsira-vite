@@ -7,15 +7,14 @@
   xmlns:b="http://www.google.com/2005/gml/b"
   xmlns:data="http://www.google.com/2005/gml/data"
   xmlns:expr="http://www.google.com/2005/gml/expr"
-  translate="no"
 >
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width,initial-scale=1" name="viewport" />
 
-    <title>Radyong Sira!</title>
-    
+    <title>Radyong Sira! - Charts</title>
 
+    
     <style id="page-skin-1" type="text/css">
       <!--
          :root {
@@ -42,17 +41,17 @@
 
          -->
     </style>
-    <link href="src/boxplayer.scss" rel="stylesheet" type="text/css" />
+    <link href="boxplayer.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Radyong Sira!" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
   <body class="color-text fs-6">
     <div class="player has-bg-cover mask color-title">
-      <img
-        alt="cover-bg"
-        class="player-poster fixed object-cover events-none"
-        height="1000"
-        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        width="1000"
-      />
       <div
         class="bigPlayerFixed song-now flex flex-column relative z-50 section"
         id="header"
@@ -69,10 +68,10 @@
         </div>
         <div class="bg-black flex justify-center">
           <span class="topnav" id="myTopnav">
-            <a href="src/index.html">Home</a>
-            <a href="src/charts.html">Charts</a>
+            <a href="./index.html">Home</a>
+            <a href="./charts.html">Charts</a>
             <a href="https://radio.ltg.network/public/radyongsira/podcasts" target="_blank">Podcasts</a>
-            <a href="src/schedule.html">Schedule</a>
+            <a href="./schedule.html">Schedule</a>
             <a href="https://bit.ly/ItoAngConfessionsForm" target="_blank">Ito ang Confessions Form</a>
             <a href="https://www.internet-radio.com/" target="_blank">Internet Radio</a>
             <a href="https://onlineradiobox.com/ph/radyongsira/" target="_blank">Online Radio Box</a>
@@ -85,7 +84,7 @@
           </span>
         </div>
         <div class="bg-black flex justify-center">
-          <span class="uppercase fs-6 fw-400 px-.5 py-.25">
+          <span class="uppercase fs-6 fw-400 px-.5 py-.25 mb-1">
             <img
               alt="live"
               id="live-broadcaster"
@@ -103,58 +102,16 @@
             <p id="live-listeners">Listeners: 0</p>
           </span>
         </div>
-        <div class="flex-1 p-2 flex items-center justify-center">
-          <div
-            class="big-cover-mobile flex l:flex-row flex-column items-center justify-center g-2"
+        <div class="bg-black p-1 flex items-center justify-center">
+          <iframe
+            src="./embed/charts.html"
+            style="border: 0"
+            width="800"
+            height="768"
+            frameborder="0"
+            scrolling="no"
           >
-            <div
-              class="song-now player-meta flex-1 o-hidden relative l:text-right"
-            >
-              <div
-                class="song-status uppercase fs-8 fw-700 px-.5 py-.25 mb-.75 inline-block"
-              >
-                now playing
-              </div>
-              <h3
-                class="song-title fw-700 nowrap fs-4 absolute l-0 s:fs-3 mb-.75"
-              >
-                Loading title...
-              </h3>
-              <div
-                class="song-artist fs-7 mt-2 artist-next opacity-.75 mb-.25 s:mt-3"
-              >
-                Loading Artist...
-              </div>
-              <div class="song-album fs-7 opacity-.75">Loading album...</div>
-            </div>
-            <img
-              alt="cover-01"
-              class="song-cover big-cover bg-dark shadow-l events-none"
-              height="300"
-              oncontextmenu="return false;"
-              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-              width="400"
-            />
-            <div class="song-next player-meta flex-1 o-hidden relative">
-              <div id="next-song-display">
-                <span
-                  class="song-status uppercase fs-8 fw-700 px-.5 py-.25 mb-.75 inline-block"
-                  >Next Song</span
-                >
-                <h3
-                  class="song-title fw-700 nowrap fs-4 absolute l-0 s:fs-3 mb-.75"
-                >
-                  Probably Live
-                </h3>
-                <div
-                  class="song-artist fs-7 mt-2 artist-next opacity-.75 mb-.25 s:mt-3"
-                >
-                  So no Next Song
-                </div>
-                <div class="song-album fs-7 opacity-.75">I guess so...?</div>
-              </div>
-            </div>
-          </div>
+          </iframe>
         </div>
         <div
           class="player-audio bg-black p-2 flex justify-center g-2 items-center relative"
@@ -212,6 +169,6 @@
       />
     </noscript>
     <script src="https://cdn.jsdelivr.net/gh/lokesh/color-thief@2/dist/color-thief.umd.js"></script>
-    <script defer="" src="public/api.js"></script>
+    <script defer="" src="api.js"></script>
   </body>
 </html>
